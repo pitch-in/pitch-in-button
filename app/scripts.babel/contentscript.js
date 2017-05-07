@@ -42,13 +42,10 @@ function countMatches() {
     return [topic, matchCount];
   });
 
-  console.log(`Matches!: ${matchCounts}`);
-
   return matchCounts;
 }
 
 chrome.runtime.onMessage.addListener(({ type }, sender, sendResponse) => {
-  console.log('message', type);
   if (type !== 'getMatches') return;
 
   sendResponse(countMatches());
