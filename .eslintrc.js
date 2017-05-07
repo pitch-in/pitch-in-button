@@ -3,11 +3,16 @@ module.exports = {
     "plugins": [
         "import"
     ],
+    "env": {
+      "browser": true
+    },
     "rules": {
       "strict": "off",
       "no-console": "warn",
-      "arrow-parens": ["error", "as-needed"],
-      "comma-dangle": ["warn", "only-multiline"]
+      "arrow-parens": ["warn", "as-needed"],
+      "arrow-body-style": "off",
+      "comma-dangle": ["warn", "only-multiline"],
+      "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
     },
     "globals": {
       "chrome": true,
